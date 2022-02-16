@@ -45,7 +45,7 @@ public class GameScoreTest {
         OriginalScore score = new OriginalScore();
 
         //Correct assertion independency
-        Assert.assertEquals(score.calculateScore(7, 4), score.calculateScore(-24, 6));
+        Assert.assertEquals(score.calculateScore(7, 4), score.calculateScore(-24, 4));
 
     }
 
@@ -78,7 +78,7 @@ public class GameScoreTest {
 
     @Test
     public void validatePowerScoreT1() {
-        PowerScore power = new PowerScore();
+        PowerScore score = new PowerScore();
 
         //Random intermediate case
         Assert.assertEquals(score.calculateScore(3, 4), 123);
@@ -87,16 +87,16 @@ public class GameScoreTest {
 
     @Test
     public void validatePowerScoreT2() {
-        PowerScore power = new PowerScore();
+        PowerScore score = new PowerScore();
 
         //Much Incorrect
-        Assert.assertEquals(score.calculateScore(1, 6), 123);
+        Assert.assertEquals(score.calculateScore(1, 6), 0);
 
     }
 
     @Test
     public void validatePowerScoreT3() {
-        PowerScore power = new PowerScore();
+        PowerScore score = new PowerScore();
 
         //Much Correct
         Assert.assertEquals(score.calculateScore(5, 1), 500);
