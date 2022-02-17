@@ -25,7 +25,6 @@ public class GameModel {
     private int gameScore;
     private int[] lettersUsed;
     
-    
     private HangmanDictionary dictionary;
     
     private Scanner scan;
